@@ -1,0 +1,10 @@
+<html lang="es" xml:lang="es" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8"/>
+<body>
+<p>Índice de masa corporal</p>
+<p th:with="result=${(peso_form / (estatura_form * estatura_form))/10}">
+  <span th:text="${result}"></span>
+</p>
+	
+</body>
+</html> 

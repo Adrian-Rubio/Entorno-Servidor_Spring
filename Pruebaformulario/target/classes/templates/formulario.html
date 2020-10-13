@@ -1,0 +1,86 @@
+<html lang="es" xml:lang="es" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8"/>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <title>Starter Template for Bootstrap</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Custom styles for this template -->
+        <link href="/css/starter-template.css" rel="stylesheet">
+        
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        </head>
+<body><div >
+<h1>Alta de usuario en revista online</h1>
+<form th:action="@{/formulario}" method="post">
+<fieldset><legend>Datos personales</legend>
+  <p>Nombre: <input type="text" name="nombre" size="40"></p>
+  <p>Primer apellido: <input type="text" name="Apellido1" size="40"></p>
+  <p>Segundo apellido: <input type="text" name="Apellido2" size="40"></p>
+  <p>E-mail: <input type="text" name="correo" placeholder="email@email.com"></p>
+  <p>Fecha de nacimiento 
+  <input type="number" name="dia" min="1" max="31">
+  <input type="number" name="mes" min="1" max="12">
+  <input type="number" name="anio" min="1900" max="2020">  
+  </p>
+  <p>Contrasenia: <input type="password" name="contrasenia" size="40"></p>
+  <p>Sexo:<br>
+    <input type="radio" name="hm" value="h"> Varón<br>
+    <input type="radio" name="hm" value="m"> Mujer
+  </p>
+  <p>Dirección:<input type="text" name="direccion" placeholder="calle o plaza, número y piso"></p> 
+  </fieldset>
+  <fieldset>
+  <legend>Nivel de estudios e intereses</legend>
+  <p>Nivel de estudios</p>
+  <input type="radio" name="estudios" value="1" class="custom-control custom-radio" >Certificado escolar<br>
+  <input type="radio" name="estudios" value="2" class="custom-control custom-radio">Graduado en E.S.O<br>
+  <input type="radio" name="estudios" value="3" class="custom-control custom-radio">Bachiller - Formación Profesional<br>
+  <input type="radio" name="estudios" value="4" class="custom-control custom-radio">Diplomado<br>
+  <input type="radio" name="estudios" value="5" class="custom-control custom-radio">Licenciado o Doctorado<br>
+  
+  <p>Recibir artículos sobre los siguientes temas:<br>
+  <input type="checkbox" name="temas" value="Musica">Música<br>
+  <input type="checkbox" name="temas" value="Deportes">Deportes<br>
+  <input type="checkbox" name="temas" value="Cine">Cine<br>
+  <input type="checkbox" name="temas" value="Libros">Libros<br>
+  <input type="checkbox" name="temas" value="Ciencia">Ciencia<br>
+  </p> 
+  </fieldset>
+  
+  <fieldset><legend>Enviar formulario</legend>
+  <p>¿Estás seguro de que los datos son correctos?</p>
+  <p>
+    <input type="submit" value="Enviar" class="btn btn-primary">
+  </p>
+  
+  
+  
+  
+  </fieldset>
+</form>
+
+	<!-- /.container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	</div>
+</body>
+</html>

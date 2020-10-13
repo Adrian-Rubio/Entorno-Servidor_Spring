@@ -1,0 +1,38 @@
+<html lang="es" xml:lang="es" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8"/>
+<body>
+	<p th:text=${nombre_form}></p>
+	<p th:text=${Apellido1_form}></p>
+	<p th:text=${Apellido2_form}></p>
+	<p th:text=${correo_form}></p>
+	
+	<p>Dia de nacimiento</p>
+	<p th:utext=${dia_form}></p>
+	<p>Mes de nacimiento</p>
+	<p th:utext=${mes_form}></p>
+	<p>Anio de nacimiento</p>
+	<p th:utext=${anio_form}></p>
+	
+	<p th:text=${contrasenia_form}></p>
+	
+	<p th:if="${hm_form == 'h'}" th:text="Hombre"></p>
+	<p th:if="${hm_form == 'm'}" th:text="Mujer"></p>
+
+	<p th:text=${direccion_form}></p>
+	
+	<p th:if="${estudios_form ==1}" th:text="Certificado escolar"></p>
+	<p th:if="${estudios_form ==2}" th:text="Graduado en E.S.O"></p>
+	<p th:if="${estudios_form ==3}" th:text="Bachiller - Formacion Profesional"></p>
+	<p th:if="${estudios_form ==4}" th:text="Diplomado"></p>
+	<p th:if="${estudios_form ==5}" th:text="Licenciado o Doctorado"></p>
+	
+	<p th:if="${temas_form == 'Musica'}" th:text="Musica"></p>
+	<p th:if="${temas_form == 'Deportes'}" th:text="Deportes"></p>
+	<p th:if="${temas_form == 'Libros'}" th:text="Libros"></p>
+	<p th:if="${temas_form == 'Cine'}" th:text="Cine"></p>
+	<p th:if="${temas_form == 'Ciencia'}" th:text="Ciencia"></p>
+
+
+
+</body>
+</html>
